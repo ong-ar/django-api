@@ -287,3 +287,10 @@ pip-selfcheck.json
 django_api/media/
 
 
+.vscode
+.pylintrc
+Pipfile
+Pipfile.lock
+
+django_api/users/migrations
+django_api/images/migrations
