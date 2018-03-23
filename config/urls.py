@@ -14,6 +14,7 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include('django_api.users.urls', namespace='users')),
+    url(r'^images/', include('django_api.images.urls', namespace='images')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
