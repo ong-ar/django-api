@@ -26,7 +26,7 @@ class ListAllLikes(APIView):
 
     def get(self, request, format=None):
 
-        all_like = models.like.objects.all()
+        all_like = models.Like.objects.all()
 
         serializer =  serializers.LikeSerializer(all_like, many=True)
 
