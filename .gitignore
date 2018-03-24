@@ -289,6 +289,3 @@ django_api/media/
 
 .vscode
 .pylintrc
-
-django_api/users/migrations
-django_api/images/migrations
