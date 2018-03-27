@@ -3,12 +3,12 @@ from . import models
 from django_api.users import models as user_models
 
 
-
 class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Like
         fields = '__all__'
+
 
 class FeedUserSerializer(serializers.ModelSerializer):
 
@@ -19,10 +19,11 @@ class FeedUserSerializer(serializers.ModelSerializer):
             'profile_image'
         )
 
+
 class CommentSerializer(serializers.ModelSerializer):
 
     creator = FeedUserSerializer()
-    
+
     class Meta:
         model = models.Comment
         fields = (
@@ -30,6 +31,7 @@ class CommentSerializer(serializers.ModelSerializer):
             'message',
             'creator'
         )
+
 
 class ImageSerializer(serializers.ModelSerializer):
 
@@ -49,6 +51,4 @@ class ImageSerializer(serializers.ModelSerializer):
             'likes',
             'like_count',
             'creator',
-            
         )
-

@@ -1,6 +1,7 @@
 from django.db import models
 from django_api.users import models as user_models
 
+
 class TimeStampedModel(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True, null=True)
@@ -8,6 +9,7 @@ class TimeStampedModel(models.Model):
 
     class Meta:
         abstract = True
+
 
 class Image(TimeStampedModel):
 
@@ -28,6 +30,7 @@ class Image(TimeStampedModel):
     class Meta:
         ordering = ['-created_at']
 
+
 class Comment(TimeStampedModel):
 
     """ Comment Model """
@@ -38,6 +41,7 @@ class Comment(TimeStampedModel):
 
     def __str__(self):
         return self.message
+
 
 class Like(TimeStampedModel):
 
