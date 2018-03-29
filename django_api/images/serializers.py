@@ -3,6 +3,18 @@ from . import models
 from django_api.users import models as user_models
 
 
+class UserProfileImageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.Image
+        fields = (
+            'id',
+            'file',
+            'comment_count',
+            'like_count'
+        )
+
+
 class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
