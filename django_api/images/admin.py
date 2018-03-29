@@ -3,6 +3,7 @@ from . import models
 
 # Register your models here.
 
+
 @admin.register(models.Image)
 class ImageAdmin(admin.ModelAdmin):
 
@@ -23,6 +24,7 @@ class ImageAdmin(admin.ModelAdmin):
         'creator',
     )
 
+
 @admin.register(models.Like)
 class LikeAdmin(admin.ModelAdmin):
     list_display = (
@@ -31,6 +33,7 @@ class LikeAdmin(admin.ModelAdmin):
         'creator',
         'image',
     )
+
 
 @admin.register(models.Comment)
 class CommentAdmin(admin.ModelAdmin):
