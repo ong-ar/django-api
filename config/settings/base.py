@@ -73,6 +73,7 @@ LOCAL_APPS = [
     'django_api.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'django_api.images.apps.ImagesConfig',
+    'django_api.notifications.apps.NotificationsConfig',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
