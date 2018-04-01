@@ -42,7 +42,7 @@ create app
 django-admin startapp [app_name]
 ```
 
-install jwt
+## install jwt
 
 ```
 pipenv install djangorestframework-jwt
@@ -69,4 +69,28 @@ add code to urls.py
 from rest_framework_jwt.views import obtain_jwt_token
 ...
 url(r'^api-token-auth/', obtain_jwt_token),
+```
+
+## install django-rest-auth
+
+```shell
+pipenv install django-rest-auth
+```
+
+add code to base.py
+
+```python
+INSTALLED_APPS = (
+    ...,
+    'rest_framework',
+    'rest_framework.authtoken',
+    ...,
+    'rest_auth'
+)
+```
+
+add code to urls.py
+
+```python
+url(r'^rest-auth/', include('rest_auth.urls'))
 ```

@@ -12,7 +12,9 @@ urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
 
     # User management
-    url(r'^api-token-auth/', obtain_jwt_token),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    # url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^users/', include('django_api.users.urls', namespace='users')),
     url(r'^images/', include('django_api.images.urls', namespace='images')),
     url(r'^notifications/', include('django_api.notifications.urls', namespace='notifications')),
