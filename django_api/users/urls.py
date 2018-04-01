@@ -34,11 +34,14 @@ urlpatterns = [
         view=views.UserFollowing.as_view(),
         name='user_following'
     ),
-
     url(
         regex=r'^(?P<username>\w+)/profile/$',
         view=views.UserProfile.as_view(),
         name='user_profile'
     ),
-
+    url(
+        regex=r'^(?P<username>\w+)/password/$',
+        view=views.ChangePassword.as_view(),
+        name='change_password'
+    ),
 ]
