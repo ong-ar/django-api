@@ -30,9 +30,7 @@ class LikeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Like
-        fields = (
-            'creator'
-        )
+        fields = '__all__'
 
 
 class InputImageSerializer(serializers.ModelSerializer):
