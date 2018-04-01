@@ -3,6 +3,17 @@ from . import models
 from django_api.users import models as user_models
 
 
+class SmallImageSerializer(serializers.ModelSerializer):
+
+    """ used for the notifications """
+
+    class Meta:
+        model = models.Image
+        fields = (
+            'file',
+        )
+
+
 class CountImageSerializer(serializers.ModelSerializer):
 
     class Meta:
