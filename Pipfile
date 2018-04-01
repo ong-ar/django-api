@@ -36,6 +36,7 @@ pytest-django = "==3.1.2"
 django-taggit = "*"
 pylint = "*"
 djangorestframework-jwt = "*"
+django-taggit-serializer = "*"
 
 [dev-packages]
 
