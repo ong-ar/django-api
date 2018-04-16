@@ -1,5 +1,5 @@
 export const translations = {
-  es: {
-    "Login in": "dddd"
+  kr: {
+    "About Us": "wfwf"
   }
 };
